@@ -1,0 +1,285 @@
+@font-face{
+  font-family:"YourFace";
+  src:url("./fonts/yourfaceking.woff") format("woff");
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  display:flex;
+  height:100vh;
+  overflow:hidden;
+  background:#fff;
+  color:#000;
+  font-family:Arial,sans-serif;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+  width:340px;
+  height:100vh;
+  border-right:1px solid #000;
+  padding:40px 24px;
+  overflow-y:auto;
+}
+
+.sidebar::-webkit-scrollbar{
+  width:6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb{
+  background:#000;
+}
+
+.sidebar::-webkit-scrollbar-track{
+  background:#fff;
+}
+
+h1{
+  font-size:32px;
+  line-height:1.1;
+  margin-bottom:14px;
+}
+
+.desc{
+  font-size:13px;
+  line-height:1.8;
+  margin-bottom:40px;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+
+.accordion{
+  border-top:1px solid #000;
+}
+
+.accordion:last-child{
+  border-bottom:1px solid #000;
+}
+
+.accordion-header{
+  width:100%;
+  background:#fff;
+  border:none;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+  cursor:pointer;
+  font-size:13px;
+  letter-spacing:1px;
+}
+
+.accordion-header span{
+  transition:.3s;
+}
+
+.accordion.active .accordion-header span{
+  transform:rotate(180deg);
+}
+
+.accordion-content{
+  max-height:0;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  transition:max-height .35s ease;
+  padding-right:2px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.option-btn{
+  height:72px;
+  background:#fff;
+  border:1px solid #000;
+  cursor:pointer;
+  transition:.2s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:10px;
+  font-size:20px;
+}
+
+.option-btn:hover{
+  background:#000;
+  color:#fff;
+}
+
+.part-font{
+  font-family:"YourFace";
+  font-size:42px;
+  line-height:1;
+}
+
+.adjust-mini{
+  grid-column:1/-1;
+  border-top:1px solid #000;
+  padding-top:12px;
+  margin-top:12px;
+}
+
+.adjust-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:8px;
+}
+
+.adjust-row span{
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.mini-btn{
+  width:32px;
+  height:24px;
+  border:1px solid #000;
+  background:#fff;
+  cursor:pointer;
+  margin-left:4px;
+}
+
+.mini-btn:hover{
+  background:#000;
+  color:#fff;
+}
+
+/* =========================
+   VIEWER
+========================= */
+
+.viewer{
+  flex:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+
+.archive-card{
+  width:500px;
+  background:#fff;
+  border:1px solid #000;
+  padding:40px;
+}
+
+.card-title{
+  font-size:14px;
+  letter-spacing:2px;
+  margin-bottom:30px;
+}
+
+.avatar{
+  position:relative;
+  width:500px;
+  height:600px;
+}
+
+/* =========================
+   FACE
+========================= */
+
+.face-part{
+  position:absolute;
+  left:50%;
+  top:125px;
+  transform:translateX(-50%);
+  font-family:"YourFace";
+  font-size:295px;
+  line-height:1;
+}
+
+/* =========================
+   PARTS
+========================= */
+
+.part{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  font-family:"YourFace";
+  line-height:1;
+  user-select:none;
+  pointer-events:none;
+  color:#000;
+}
+
+.eyebrow-part{
+  top:180px;
+  left:52%;
+  font-size:100px;
+  letter-spacing:20px;
+}
+
+.eye-part{
+  top:200px;
+  left:52%;
+  font-size:100px;
+  letter-spacing:19px;
+  transform:translateX(-50%);
+  transform-origin:center center;
+}
+
+.nose-part{
+  top:232px;
+  font-size:90px;
+  transform:translateX(-50%);
+  transform-origin:center center;
+}
+
+.mouth-part{
+  top:295px;
+  left:50.5%;
+  font-size:90px;
+  transform:translateX(-50%);
+  transform-origin:center center;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info{
+  margin-top:30px;
+  border-top:1px solid #000;
+  padding-top:20px;
+  font-size:12px;
+  line-height:2;
+}
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-btn{
+  position:fixed;
+  right:40px;
+  bottom:40px;
+  width:90px;
+  height:40px;
+  background:#fff;
+  border:1px solid #000;
+  cursor:pointer;
+  font-size:12px;
+  letter-spacing:1px;
+  transition:.2s;
+}
+
+.save-btn:hover{
+  background:#000;
+  color:#fff;
+}

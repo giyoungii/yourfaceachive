@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOURFACE ARCHIVE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+
+  <h1>니얼굴 아카이브</h1>
+
+  <p class="desc">
+    눈, 코, 입, 눈썹, 얼굴형을 조합하여 만드는<br>
+    나만의 관상 메이커
+  </p>
+
+  <!-- FACE -->
+  <div class="accordion">
+    <button class="accordion-header">
+      얼굴형
+      <span>▾</span>
+    </button>
+
+    <div class="accordion-content">
+
+      <button class="option-btn part-font" onclick="setFace('0')">0</button>
+      <button class="option-btn part-font" onclick="setFace('1')">1</button>
+      <button class="option-btn part-font" onclick="setFace('2')">2</button>
+      <button class="option-btn part-font" onclick="setFace('3')">3</button>
+      <button class="option-btn part-font" onclick="setFace('4')">4</button>
+      <button class="option-btn part-font" onclick="setFace('5')">5</button>
+
+    </div>
+  </div>
+
+  <!-- EYEBROW -->
+  <div class="accordion">
+
+    <button class="accordion-header">
+      눈썹
+      <span>▾</span>
+    </button>
+
+    <div class="accordion-content">
+
+      <button class="option-btn part-font" onclick="setBrows('aA')">aA</button>
+      <button class="option-btn part-font" onclick="setBrows('bB')">bB</button>
+      <button class="option-btn part-font" onclick="setBrows('cC')">cC</button>
+      <button class="option-btn part-font" onclick="setBrows('dD')">dD</button>
+
+    </div>
+  </div>
+
+  <!-- EYES -->
+  <div class="accordion">
+
+    <button class="accordion-header">
+      눈
+      <span>▾</span>
+    </button>
+
+    <div class="accordion-content">
+
+      <button class="option-btn part-font" onclick="setEyes('fF')">fF</button>
+      <button class="option-btn part-font" onclick="setEyes('gG')">gG</button>
+      <button class="option-btn part-font" onclick="setEyes('hH')">hH</button>
+      <button class="option-btn part-font" onclick="setEyes('iI')">iI</button>
+      <button class="option-btn part-font" onclick="setEyes('jJ')">jJ</button>
+      <button class="option-btn part-font" onclick="setEyes('kK')">kK</button>
+
+      <div class="adjust-mini">
+
+        <div class="adjust-row">
+          <span>크기</span>
+          <div>
+            <button class="mini-btn" onclick="eyeSizeSmall()">−</button>
+            <button class="mini-btn" onclick="eyeSizeLarge()">+</button>
+          </div>
+        </div>
+
+        <div class="adjust-row">
+          <span>높이</span>
+          <div>
+            <button class="mini-btn" onclick="eyeUp()">↑</button>
+            <button class="mini-btn" onclick="eyeDown()">↓</button>
+          </div>
+        </div>
+
+        <div class="adjust-row">
+          <span>간격</span>
+          <div>
+            <button class="mini-btn" onclick="eyeGapSmall()">−</button>
+            <button class="mini-btn" onclick="eyeGapLarge()">+</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- NOSE -->
+  <div class="accordion">
+
+    <button class="accordion-header">
+      코
+      <span>▾</span>
+    </button>
+
+    <div class="accordion-content">
+
+      <button class="option-btn part-font" onclick="setNose('L')">L</button>
+      <button class="option-btn part-font" onclick="setNose('M')">M</button>
+      <button class="option-btn part-font" onclick="setNose('N')">N</button>
+      <button class="option-btn part-font" onclick="setNose('O')">O</button>
+      <button class="option-btn part-font" onclick="setNose('P')">P</button>
+      <button class="option-btn part-font" onclick="setNose('Q')">Q</button>
+
+      <div class="adjust-mini">
+
+        <div class="adjust-row">
+          <span>크기</span>
+          <div>
+            <button class="mini-btn" onclick="noseSizeSmall()">−</button>
+            <button class="mini-btn" onclick="noseSizeLarge()">+</button>
+          </div>
+        </div>
+
+        <div class="adjust-row">
+          <span>높이</span>
+          <div>
+            <button class="mini-btn" onclick="noseUp()">↑</button>
+            <button class="mini-btn" onclick="noseDown()">↓</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MOUTH -->
+  <div class="accordion">
+
+    <button class="accordion-header">
+      입
+      <span>▾</span>
+    </button>
+
+    <div class="accordion-content">
+
+      <button class="option-btn part-font" onclick="setMouth('R')">R</button>
+      <button class="option-btn part-font" onclick="setMouth('S')">S</button>
+      <button class="option-btn part-font" onclick="setMouth('T')">T</button>
+      <button class="option-btn part-font" onclick="setMouth('U')">U</button>
+      <button class="option-btn part-font" onclick="setMouth('V')">V</button>
+      <button class="option-btn part-font" onclick="setMouth('W')">W</button>
+
+      <div class="adjust-mini">
+
+        <div class="adjust-row">
+          <span>크기</span>
+          <div>
+            <button class="mini-btn" onclick="mouthSizeSmall()">−</button>
+            <button class="mini-btn" onclick="mouthSizeLarge()">+</button>
+          </div>
+        </div>
+
+        <div class="adjust-row">
+          <span>높이</span>
+          <div>
+            <button class="mini-btn" onclick="mouthUp()">↑</button>
+            <button class="mini-btn" onclick="mouthDown()">↓</button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="viewer">
+
+  <div class="archive-card" id="archiveCard">
+
+    <div class="card-title">
+      YOURFACE ARCHIVE
+    </div>
+
+    <div class="avatar">
+
+      <div class="face-part part-font" id="facePart">0</div>
+
+      <div class="part eyebrow-part" id="eyebrowPart">aA</div>
+
+      <div class="part eye-part" id="eyePart">fF</div>
+
+      <div class="part nose-part" id="nosePart">M</div>
+
+      <div class="part mouth-part" id="mouthPart">R</div>
+
+    </div>
+
+    <div class="info">
+
+      <div>눈썹 : <span id="browLabel">올라간 눈썹</span></div>
+      <div>눈 : <span id="eyeLabel">둥근 눈</span></div>
+      <div>코 : <span id="noseLabel">정석 코</span></div>
+      <div>입 : <span id="mouthLabel">두툼한 입</span></div>
+
+    </div>
+
+  </div>
+
+  <button class="save-btn" id="saveBtn" onclick="saveAvatar()">
+    SAVE
+  </button>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
